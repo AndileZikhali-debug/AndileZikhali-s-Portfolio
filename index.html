@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Andile Zikhali's professional portfolio showcasing web development expertise.">
-    <title>Home | Andile Zikhali</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,30 +11,25 @@
     <header>
         <div class="logo">My Portfolio</div>
         <nav>
-            <ul id="menu" class="hidden">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
 
-    <!-- Hero Section with Rainbow Background -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="background"></div> <!-- Rainbow background -->
-        <div class="hero-content">
-            <h1>Welcome to Andile's Portfolio</h1>
-            <p>Coding the Nearest Future Tech.</p>
-            <!-- Home Page Photo -->
-            <img src="your-photo.jpg" alt="Andile Zikhali" class="home-photo">
-        </div>
+        <img src="hero-image.jpg" alt="Welcome to Andile's Portfolio" class="hero-image">
+        <h1>Welcome to Andile's Portfolio</h1>
+        <p>Coding the Nearest Future Tech.</p>
     </section>
 
-    <!-- About Me Section -->
+    <!-- About Us Section -->
     <section id="about">
         <h2>About Me</h2>
         <img src="my-photo.jpg" alt="My Photo" class="about-photo">
@@ -47,16 +41,69 @@
         </p>
     </section>
 
-    <!-- Footer -->
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <img src="lelo-games.jpg" alt="LELO Games Project" class="project-image">
+                <h3>LELO Games</h3>
+                <p>An innovative game aggregator app that connects users to games like FIFA, Need for Speed, and more. Features include user authentication and progress-saving functionality.</p>
+            </div>
+            <div class="project-item">
+                <img src="mzansivz.jpg" alt="MzansiVz Project" class="project-image">
+                <h3>MzansiVz</h3>
+                <p>A Netflix-style streaming app offering a curated library of African content. It provides users with a seamless entertainment experience.</p>
+            </div>
+            <div class="project-item">
+                <img src="accountant-platform.jpg" alt="Accountant Platform" class="project-image">
+                <h3>Accountant-Business Connector</h3>
+                <p>A Laravel-based platform that connects certified accountants with businesses, ensuring trust and secure payments.</p>
+            </div>
+            <div class="project-item">
+                <img src="homepages.jpg" alt="Interactive Homepages" class="project-image">
+                <h3>Interactive Homepages</h3>
+                <p>Designed visually appealing homepages with interactive navigation and a focus on usability for clients in various industries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services</h2>
+        <ul>
+            <li>Web Development & Design</li>
+            <li>Game Aggregator Platforms</li>
+            <li>Custom App Development</li>
+            <li>Streaming Platform Solutions</li>
+            <li>Accounting Platform Integration</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+            "Working with this team was an absolute pleasure. They delivered beyond our expectations with their LELO Games project." 
+            <cite>- SEDA Representative</cite>
+        </blockquote>
+        <blockquote>
+            "The MzansiVz platform is truly groundbreaking. It has set a new benchmark for content streaming in Africa." 
+            <cite>- Empire Partner Foundation</cite>
+        </blockquote>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you'd like to collaborate or learn more about my work, feel free to reach out:</p>
+        <p>Email: <a href="mailto:zikhalia851@gmail.com">zikhalia851@gmail.com</a></p>
+        <p>Phone: +27 830 7800</p>
+        <p>Follow me on LinkedIn: <a href="https://www.linkedin.com/in/andile-zikhali-a46379222?trk=contact-info" target="_blank">LinkedIn Profile</a></p>
+    </section>
+
     <footer>
         <p>&copy; 2024 Andile Zikhali. All rights reserved.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
 </body>
 </html>
