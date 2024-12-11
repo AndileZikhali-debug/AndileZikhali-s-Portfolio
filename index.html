@@ -12,7 +12,7 @@
     <header>
         <div class="logo">My Portfolio</div>
         <nav>
-            <ul>
+            <ul id="menu" class="hidden">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -20,6 +20,7 @@
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
 
@@ -32,9 +33,28 @@
         </div>
     </section>
 
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="my-photo.jpg" alt="My Photo" class="about-photo">
+        <p>
+            Welcome to my professional portfolio. Over the years, I've collaborated with esteemed organizations such as 
+            <strong>SEDA</strong>, <strong>Empire Partner Foundation</strong>, <strong>GameOn Africa</strong>, and 
+            <strong>Ushaka Gaming Studio</strong>. My expertise spans web development, app design, and creating unique 
+            solutions for diverse challenges. My goal is to deliver value through innovation and creativity.
+        </p>
+    </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Andile Zikhali. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
