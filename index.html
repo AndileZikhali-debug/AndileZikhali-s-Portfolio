@@ -10,32 +10,50 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
+
         header {
             background-color: #333;
             color: white;
             padding: 15px 0;
             text-align: center;
         }
+
+        header h1 {
+            font-size: 36px;
+        }
+
         nav {
             margin: 10px 0;
         }
+
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
+            transition: background-color 0.3s ease;
         }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
         section {
             padding: 20px;
             text-align: center;
         }
+
         footer {
             background-color: #333;
             color: white;
             padding: 10px;
             text-align: center;
         }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             nav a {
@@ -43,43 +61,170 @@
                 margin: 10px 0;
                 font-size: 16px;
             }
+
             section {
                 padding: 15px;
             }
+
+            header h1 {
+                font-size: 28px;
+            }
         }
+
         @media (max-width: 480px) {
             header {
                 font-size: 20px;
             }
+
             nav a {
                 font-size: 14px;
             }
         }
+
+        /* Button Layout */
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-item {
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .project-item h3 {
+            margin: 15px 0;
+        }
+
+        .project-item p {
+            padding: 0 15px 15px;
+        }
+
+        /* About Section Image */
+        .about-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <h1>Welcome to My Portfolio</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
+
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Andile Zikhali, a passionate developer building innovative solutions.</p>
+        <img src="my-photo.jpg" alt="Andile Zikhali" class="about-photo">
+        <p>Hi! I'm Andile Zikhali, a passionate developer building innovative solutions. Over the years, I've collaborated with esteemed organizations such as 
+        <strong>SEDA</strong>, <strong>Empire Partner Foundation</strong>, <strong>GameOn Africa</strong>, and <strong>Ushaka Gaming Studio</strong>. My expertise spans web development, app design, and creating unique solutions for diverse challenges. My goal is to deliver value through innovation and creativity.</p>
+        <div class="button-container">
+            <a href="#projects" class="button">View My Projects</a>
+        </div>
     </section>
+
+    <!-- Projects Section -->
     <section id="projects">
         <h2>My Projects</h2>
-        <p>Coming soon...</p>
+        <div class="project-list">
+            <div class="project-item">
+                <img src="lelo-games.jpg" alt="LELO Games Project">
+                <h3>LELO Games</h3>
+                <p>An innovative game aggregator app that connects users to games like FIFA, Need for Speed, and more. Features include user authentication and progress-saving functionality.</p>
+            </div>
+            <div class="project-item">
+                <img src="mzansivz.jpg" alt="MzansiVz Project">
+                <h3>MzansiVz</h3>
+                <p>A Netflix-style streaming app offering a curated library of African content. It provides users with a seamless entertainment experience.</p>
+            </div>
+            <div class="project-item">
+                <img src="accountant-platform.jpg" alt="Accountant Platform">
+                <h3>Accountant-Business Connector</h3>
+                <p>A Laravel-based platform that connects certified accountants with businesses, ensuring trust and secure payments.</p>
+            </div>
+            <div class="project-item">
+                <img src="homepages.jpg" alt="Interactive Homepages">
+                <h3>Interactive Homepages</h3>
+                <p>Designed visually appealing homepages with interactive navigation and a focus on usability for clients in various industries.</p>
+            </div>
+        </div>
     </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services</h2>
+        <ul>
+            <li>Web Development & Design</li>
+            <li>Game Aggregator Platforms</li>
+            <li>Custom App Development</li>
+            <li>Streaming Platform Solutions</li>
+            <li>Accounting Platform Integration</li>
+        </ul>
+        <div class="button-container">
+            <a href="#contact" class="button">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or learn more about my work, feel free to reach out:</p>
         <p>Email: <a href="mailto:andile@example.com">andile@example.com</a></p>
+        <p>Phone: +27 830 7800</p>
+        <p>Follow me on LinkedIn: <a href="https://www.linkedin.com/in/andile-zikhali-a46379222?trk=contact-info" target="_blank">LinkedIn Profile</a></p>
+        <div class="button-container">
+            <a href="mailto:andile@example.com" class="button">Send an Email</a>
+        </div>
     </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Andile Zikhali. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
