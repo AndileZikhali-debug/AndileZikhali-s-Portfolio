@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio showcasing web development, app design, and innovative solutions by Andile Zikhali.">
+    <meta name="description" content="Andile Zikhali's portfolio showcasing web development, app design, and innovative solutions.">
     <meta name="author" content="Andile Zikhali">
     <meta name="keywords" content="portfolio, web development, app design, Andile Zikhali, innovation">
     <title>Andile Zikhali - Portfolio</title>
@@ -105,14 +105,31 @@
             margin: 0 auto 30px;
         }
 
-        section ul {
-            list-style: none;
-            padding: 0;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
         }
 
-        section ul li {
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
             font-size: 1.2rem;
-            margin: 10px 0;
+            margin-bottom: 10px;
+            color: #ffd700;
         }
 
         footer {
@@ -161,7 +178,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div>
-            <h1>Welcome to Andile's Portfolio</h1>
+            <h1>Welcome to Andile Zikhali's Business Portfolio</h1>
             <p>Coding the Nearest Future Tech</p>
             <img src="hero-image.jpg" alt="Andile Zikhali">
         </div>
@@ -169,48 +186,69 @@
 
     <!-- About Section -->
     <section id="about">
-        <div>
         <h2>About Me</h2>
-        <img src="my-photo.jpg alt="Andile Zikhali">
         <p>
-            Welcome to my professional portfolio. Over the years, I’ve collaborated with esteemed organizations 
-            such as <strong>SEDA</strong>, <strong>Empire Partner Foundation</strong>, <strong>GameOn Africa</strong>, 
-            and <strong>Ushaka Gaming Studio</strong>. My expertise spans web development, app design, and creating 
-            unique solutions for diverse challenges.
+            Welcome to my professional portfolio! I specialize in delivering innovative solutions that drive impact and elevate businesses to new heights. Over the years, I’ve had the privilege of collaborating with leading organizations such as <strong>SEDA</strong>, <strong>Empire Partner Foundation</strong>, <strong>GameOn Africa</strong>, and <strong>Ushaka Gaming Studio</strong>. My expertise lies in web development, app design, and crafting custom software solutions tailored to meet unique needs.
+
+From creating cutting-edge digital platforms to designing seamless user experiences, I bring a combination of creativity, technical expertise, and a passion for excellence. Whether you need a dynamic website, a user-friendly mobile app, or strategic guidance for your digital transformation, I’m here to help you achieve your goals. Let’s build something exceptional together!
         </p>
-        <p>My goal is to deliver value through innovation and creativity.</p>
-        </div>
+        <img src="my-photo.jpg" alt="Andile Zikhali" style="max-width: 200px; border-radius: 50%; margin-top: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);">
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <p>Here are some highlights of my recent work:</p>
-        <ul>
-            <li><strong>Project 1:</strong> A web-based platform for customer feedback.</li>
-            <li><strong>Project 2:</strong> A gaming lounge management system.</li>
-            <li><strong>Project 3:</strong> A mobile app for scheduling and task management.</li>
-        </ul>
+        <div class="grid">
+            <div class="card">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A web-based platform for customer feedback.</p>
+            </div>
+            <div class="card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>A gaming lounge management system.</p>
+            </div>
+            <div class="card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A mobile app for scheduling and task management.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Services Section -->
     <section id="services">
         <h2>My Services</h2>
-        <p>I offer a wide range of services, including:</p>
-        <ul>
-            <li>Web Development</li>
-            <li>App Development</li>
-            <li>UI/UX Design</li>
-            <li>Custom Software Solutions</li>
-            <li>Consultancy for Small and Medium Businesses</li>
-        </ul>
+        <div class="grid">
+            <div class="card">
+                <img src="service1.jpg" alt="Web Development">
+                <h3>Web Development</h3>
+            </div>
+            <div class="card">
+                <img src="service2.jpg" alt="App Development">
+                <h3>App Development</h3>
+            </div>
+            <div class="card">
+                <img src="service3.jpg" alt="UI/UX Design">
+                <h3>UI/UX Design</h3>
+            </div>
+            <div class="card">
+                <img src="service4.jpg" alt="Custom Software">
+                <h3>Custom Software Solutions</h3>
+            </div>
+            <div class="card">
+                <img src="service5.jpg" alt="Consultancy">
+                <h3>Consultancy for Businesses</h3>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Get in touch to discuss how I can help you achieve your goals:</p>
-        <p>Email: <a href="zikhalia851@gmail.com">zikhalia851@gmail.com</a></p>
+        <p>Get in touch and let's create something unique together!:</p>
+        <p>Email: <a href="zikhalia@gmail.com">zikhalia851@gmail.com</a></p>
         <p>Phone: +27 62 830 7800</p>
         <p>Location: Johannesburg, South Africa</p>
     </section>
@@ -222,4 +260,3 @@
     </footer>
 </body>
 </html>
-
