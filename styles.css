@@ -103,5 +103,20 @@ nav ul li a:hover {
 @media (max-width: 480px) {
   /* Further adjustments for very small screens */
 }
+.container {
+  width: 100%; /* Instead of fixed width */
+  max-width: 1200px; /* Optional max width for larger screens */
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Reduce font size */
+  }
+  .container {
+    padding: 10px; /* Reduce padding */
+  }
+  .box {
+    flex: 1 1 100%; /* Make elements stack vertically */
+  }
+}
 
 }
