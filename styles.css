@@ -96,4 +96,12 @@ nav ul li a:hover {
         padding: 10px;
         width: 200px;
     }
+    @media (max-width: 768px) {
+  /* Adjust font sizes, paddings, and layout for small screens */
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+}
+
 }
