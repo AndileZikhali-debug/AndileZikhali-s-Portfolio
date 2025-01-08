@@ -5,399 +5,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Andile Zikhali's portfolio showcasing web development, app design, and innovative solutions.">
     <meta name="author" content="Andile Zikhali">
-    <meta name="keywords" content="portfolio, web development, app design, Andile Zikhali, innovation">
-    <title>Andile Zikhali - Portfolio</title>
+    <meta name="keywords"
+        content="Andile Zikhali, Web Development, App Design, Full-Stack Development, Laravel, React, MongoDB, Node.js, Custom Platforms">
+    <title>Andile Zikhali Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* General Reset and Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    color: white;
-    margin: 0;
-    background: linear-gradient(90deg, #ff7eb3, #ff758c, #7d7aff, #ff75d9);
-    background-size: 400% 400%;
-    animation: rainbow 10s infinite alternate;
-    overflow-x: hidden;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #fff;
+        }
 
-header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #4f46e5, #2563eb);
+        }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
 
-nav ul li {
-    margin: 0 10px;
-}
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 7px;
-    border-radius: 4px;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
+        .about,
+        .projects,
+        .services,
+        .contact {
+            margin-bottom: 50px;
+        }
 
-nav ul li a:hover {
-    color: #ffd700;
-}
+        .about h2,
+        .projects h2,
+        .services h2,
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #38bdf8;
+        }
 
-.hero {
-    height: calc(100vh - 80px); /* Adjust height to account for fixed header */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
+        .about p {
+            text-align: justify;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
-}
+        .projects .project {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
+        .projects .project h3 {
+            font-size: 1.5rem;
+            color: #4f46e5;
+            margin-bottom: 10px;
+        }
 
-.hero img {
-    max-width: 450px;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
+        .services ul li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
 
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffd700;
-}
+        .services ul li::before {
+            content: "✔";
+            color: #4f46e5;
+            margin-right: 10px;
+        }
 
-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 30px;
-}
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
+        .contact input,
+        .contact textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1rem;
+        }
 
-.card {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
+        .contact button {
+            padding: 10px;
+            background: #4f46e5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
 
-.card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
+        .contact button:hover {
+            background: #2563eb;
+        }
 
-.card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #ffd700;
-}
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f172a;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
 
-footer {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: white;
-}
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
 
-footer p {
-    margin: 0;
-}
+            .projects .project {
+                font-size: 0.9rem;
+            }
 
-footer a {
-    text-decoration: none;
-    color: #ffd700;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-@keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 15px 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 10px 5px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .card h3 {
-        font-size: 1rem;
-    }
-}
-
+            .about p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
     <header>
-        <div class="logo">Andile Zikhali</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Welcome to Andile Zikhali's Portfolio</h1>
+        <p>Innovative Solutions for Web, App, and Custom Software Development</p>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div>
-            <h1>Welcome to Andile Zikhali's Business Portfolio</h1>
-            <p>Coding the Nearest Future Tech</p>
-            <img src="hero-image.jpg" alt="Andile Zikhali">
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
+    <section class="about">
         <h2>About Me</h2>
-        <p><strong>I am a passionate</strong> and innovative web developer, designer, and entrepreneur with a proven track record of crafting digital experiences that stand out. With years of experience working on impactful projects, I specialize in creating interactive, user-friendly, and visually captivating websites and apps that exceed expectations.
-
-Over the years, I have collaborated with notable organizations such as SEDA, Empire Partner Foundation, GameOn Africa, and Ushaka Gaming Studio, delivering cutting-edge digital solutions tailored to their unique needs. My expertise spans web development, app creation, and platform design, all rooted in a strong commitment to quality and creativity.
-
-In addition to designing dynamic platforms like MzansiVz, a Netflix-style streaming app, and LELO Games, a game aggregator with seamless user interfaces, I am dedicated to solving real-world problems. Whether connecting certified accountants with small businesses through a secure Laravel-based platform or integrating cutting-edge authentication systems like Firebase OTP, my goal is to bridge gaps through technology.
-
-At the heart of my work is a drive to empower businesses and individuals with tools that inspire and deliver results. I approach each project with enthusiasm, a keen eye for detail, and a collaborative mindset, ensuring every solution is as unique as the people I work with.
-
-Let’s build something extraordinary together!
-             </p>
-        <img src="my-photo.jpg" alt="Andile Zikhali" style="max-width: 350px; border-radius: 50%; margin-top: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);">
+        <p>Hi, I’m Andile Zikhali, a passionate full-stack developer with expertise in Laravel, React, MongoDB, .NET, and much more. I’ve worked with prestigious organizations such as SEDA, Empire Partner Foundation, and Ushaka Gaming Studio to deliver innovative solutions.</p>
+        <p>From crafting robust web applications to designing intuitive user interfaces, I aim to bridge technology with creativity to solve real-world problems.</p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <section class="projects">
         <h2>Projects</h2>
-        <div class="card">
-                <img src="project6.jpg" alt="Interractive Website">
-                <h3>Responsive Website Development</h3>
-                <p>Designed and focused on creating engaging, user friendly and functional digital experiences  tailored to each organization goals.</p>
-            </div>
-        <div class="grid">
-            <div class="card">
-                <img src="project1.jpg" alt="Web App">
-                <h3>Web App Platform</h3>
-                <p>A web-based platform for customer feedback.</p>
-            </div>
-            <div class="card">
-                <img src="project2.jpg" alt="Management System">
-                <h3>Management System</h3>
-                <p>A gaming lounge management system.</p>
-            </div>
-            <div <div class="card">
-                <img src="project4.jpg" alt="Aggregator App">
-                <h3>Gaming Aggregator App</h3>
-                <p>Gaming Aggregator App thats mobile for playing almost any game using your simple andriod device or IOS.</p>
-            </div>
-            <div class="card">
-                <img src="project3.jpg" alt="Mobile App">
-                <h3>Mobile App</h3>
-                <p>A mobile app for scheduling and task management.</p>
-            </div>
-            <div class="card">
-                <img src="project5.jpg" alt="Streaming App">
-                <h3>Streaming Mobile & Web App</h3>
-                <p>A local streaming movie app that functions on both mobile and web devices.</p>
-            </div>
+        <div class="project">
+            <h3>MzansiVz</h3>
+            <p>A Netflix-style streaming app with an intuitive design and personalized recommendations.</p>
+        </div>
+        <div class="project">
+            <h3>LELO Games</h3>
+            <p>A game aggregator app allowing users to log in, save progress, and enjoy popular games like FIFA and Mortal Kombat.</p>
+        </div>
+        <div class="project">
+            <h3>Custom Management Systems</h3>
+            <p>Developed tailored management solutions for businesses to enhance their operations.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>My Services</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="service1.jpg" alt="Web Development">
-                <h3>Web Development</h3>
-                <p>Bring your ideas to life with custom, high-performing, and visually stunning websites. I specialize in creating responsive, user-friendly designs tailored to your brand’s identity and goals. Whether you need a personal website, e-commerce store, or corporate platform, I ensure your online presence is impactful and functional.
-</p>
-            </div>
-            <div class="card">
-                <img src="service2.jpg" alt="App Development">
-                <h3>App Development</h3>
-                <p>
-                    Unlock your potential with intuitive, cutting-edge mobile and desktop apps. From Netflix-style streaming platforms like MzansiVz to game aggregators such as LELO Games, I design and develop apps that are engaging, interactive, and user-focused. My goal is to deliver seamless experiences that keep users coming back.
-                </p>
-            </div>
-            <div class="card">
-                <img src="service3.jpg" alt="UI/UX Design">
-                <h3>UI/UX Design</h3>
-                <p>
-                  First impressions matter! I design interfaces that captivate your audience while delivering the best user experience. From interactive layouts to clean, functional designs, I focus on usability and aesthetics to ensure every interaction is smooth and enjoyable.  
-                </p>
-            </div>
-            <div class="card">
-                <img src="ethical.jpg" alt="Ethcal Hacking">
-                <h3>Ethical Hacking</h3>
-                <p>
-                    Secure your digital assets with proactive and reliable ethical hacking services. I identify vulnerabilities in your systems, networks, and applications, ensuring that potential risks are addressed before they can be exploited. By safeguarding your platform, I help protect your data and build user trust.
-                </p>
-            </div>
-            <div class="card">
-                <img src="Back-End.jpg" alt="Back-End Web Dev">
-                <h3>Back-End Web Development</h3>
-                <p>
-                    Backend web development focuses on building the server, database, and application logic that powers a website or web application. It includes designing the server architecture, ensuring proper database integration, creating APIs, and ensuring that data flows efficiently between the front end and back end. This part of development ensures that everything users interact with functions properly behind the scenes, from processing payments to managing user accounts.
-                </p>
-            </div>
-            <div class="card">
-                <img src="NET-frame.jpg" alt="Net-Framework">
-                <h3>NET-Framework</h3>
-                <p>
-                    The .NET Framework is a powerful, flexible platform for building web and enterprise applications. With the .NET framework, we build secure, scalable, and high-performance applications that run on Windows servers or across multiple platforms. It supports languages like C# and VB.NET, and offers tools like ASP.NET for web development. We use this framework to create robust applications that can handle complex business logic and large data loads.
-                </p>
-            </div>
-            <div class="card">
-                <img src="Full-SD.jpg" alt="Full-Stack Development">
-                <h3>Full-Stack Development</h3>
-                <p>
-                    Full-stack development refers to the development of both the front end and back end of a website or application. As a full-stack developer, we handle everything from user interfaces to databases and server management. Whether it’s designing user interfaces, coding server-side logic, or integrating databases, we ensure that the entire stack functions seamlessly to deliver an optimized, end-to-end solution.
-
-                </p>
-            </div>
-            <div class="card">
-                <img src="MongoDB.jpg" alt="MongoDB">
-                <h3>MongoDB And Node</h3>
-                <p>
-                    MongoDB is a NoSQL database that stores data in flexible, JSON-like format, which allows for high performance and scalability. Paired with Node.js, a powerful JavaScript runtime, we can build fast, scalable web applications that handle large volumes of data and traffic. This combination allows us to create real-time, high-performance applications, whether for data-driven web platforms or IoT devices.
-                </p>
-            </div>
-                <div class="card">
-                    <img src="JavaScript.jpg" alt="Javascript And React">
-                    <h3>JavaScript And React</h3>
-                    <p>
-                        JavaScript is the language of the web, enabling interactive and dynamic content in web applications. Paired with React, a JavaScript library for building user interfaces, we can create fast, scalable, and responsive web applications that provide a smooth user experience. React enables component-based architecture, which means easier maintenance, better performance, and the ability to build large-scale applications quickly and efficiently.
-                    </p>
-            </div>
-                <div class="card">
-                    <img src="Laravel.jpg" alt="Laravel">
-                    <h3>Laravel</h3>
-                    <p>
-                        Laravel is a PHP framework that simplifies backend development. We use Laravel to build modern, robust, and scalable applications with features like routing, middleware, and built-in authentication. With Laravel’s elegant syntax and powerful tools, we can develop custom web solutions that are secure, efficient, and easy to maintain, whether for e-commerce sites, content management systems, or enterprise applications.
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="databases.jpg" alt="Databases">
-                    <h3>Databases</h3>
-                    <p>
-                        Databases are the backbone of any application that requires persistent data storage. Whether we’re working with MySQL, PostgreSQL, MongoDB, or any other database system, we specialize in designing and managing database systems that efficiently store and retrieve data for your applications. From setting up relational databases to managing NoSQL systems, we ensure your data is well-organized and accessible with optimal performance.
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="JavCSS.jpg" alt="Java And CSS">
-                    <h3>Java And Cascading Style Sheets</h3>
-                    <p>
-                        Java is a powerful, object-oriented programming language commonly used for building robust, high-performance backend systems, especially in enterprise environments. Paired with CSS (Cascading Style Sheets), which styles the visual presentation of web content, we ensure that your applications are both functional and aesthetically pleasing. Java enables dynamic, secure backend functionality, while CSS ensures the front end is styled consistently across devices.
-                    </p>
-                </div>
-            <div class="card">
-                <img src="service4.jpg" alt="Custom Software">
-                <h3>Custom Software Solutions</h3>
-                <p>
-                    Every business has unique needs that require tailored solutions. We specialize in developing custom software solutions that are designed to meet the specific challenges and goals of your business. Whether you need a specialized CRM, project management tool, or an integrated platform for your services, we create solutions that increase efficiency, improve workflows, and enhance productivity.
-                </p>
-            </div>
-            <div class="card">
-                <img src="service5.jpg" alt="Consultancy">
-                <h3>Consultancy for Businesses</h3>
-                <p>
-                    Navigating the complexities of technology and software development can be daunting. Our consultancy services provide expert guidance on technology decisions, system architectures, and strategic digital transformation. We help businesses choose the right technologies, implement best practices, and optimize existing systems to improve operational efficiency, reduce costs, and achieve business goals faster.
-
-                </p>
-            </div>
-        </div>
+    <section class="services">
+        <h2>Services</h2>
+        <ul>
+            <li>Frontend Development: React, Angular</li>
+            <li>Backend Development: Laravel, Node.js, .NET</li>
+            <li>Database Solutions: MongoDB, MySQL</li>
+            <li>Custom Web Platforms</li>
+            <li>Mobile App Development</li>
+            <li>API Development & Integration</li>
+            <li>Consulting & Training</li>
+        </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <section class="contact">
         <h2>Contact Me</h2>
-        <p>Get in touch and let's create something unique together!:</p>
-        <p>Email: <a href="zikhalia@gmail.com">zikhalia851@gmail.com</a></p>
-        <p>Phone: +27 62 830 7800</p>
-        <p>Location: Johannesburg, South Africa</p>
+        <form action="zikhalia851@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Andile Zikhali. All rights reserved.</p>
-        <p>Made with ❤️ by Andile</p>
+        <p>Made with ❤️ by Andile Zikhali | &copy; 2025 All Rights Reserved</p>
     </footer>
 </body>
 </html>
