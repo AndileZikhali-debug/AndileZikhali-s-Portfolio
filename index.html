@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Andile Zikhali's portfolio showcasing web development, app design, and innovative solutions.">
     <meta name="author" content="Andile Zikhali">
-    <meta name="keywords"
-        content="Andile Zikhali, Web Development, App Design, Full-Stack Development, Laravel, React, MongoDB, Node.js, Custom Platforms">
+    <meta name="keywords" content="Andile Zikhali, Web Development, App Design, Full-Stack Development, Laravel, React, MongoDB, Node.js, Custom Platforms">
     <title>Andile Zikhali Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* General Reset */
         * {
@@ -23,26 +23,70 @@
             line-height: 1.6;
             background: linear-gradient(135deg, #1e293b, #0f172a);
             color: #fff;
+            scroll-behavior: smooth;
         }
 
+        /* Sticky Navigation Menu */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(30, 41, 59, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4f46e5;
+        }
+
+        /* Header Section */
         header {
             text-align: center;
-            padding: 50px 20px;
+            padding: 150px 20px;
             background: linear-gradient(135deg, #4f46e5, #2563eb);
         }
 
         header h1 {
             font-size: 2.5rem;
             font-weight: 700;
+            animation: fadeIn 2s ease-in-out;
         }
 
         header p {
             font-size: 1.2rem;
             margin-top: 10px;
+            animation: fadeIn 3s ease-in-out;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Sections */
         section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -51,15 +95,15 @@
         .projects,
         .services,
         .contact {
-            margin-bottom: 50px;
+            margin-bottom: 80px;
         }
 
         .about h2,
         .projects h2,
         .services h2,
         .contact h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
             text-align: center;
             color: #38bdf8;
         }
@@ -68,22 +112,31 @@
             text-align: justify;
             margin-bottom: 20px;
             font-size: 1rem;
+            line-height: 1.8;
         }
 
+        /* Projects Section */
         .projects .project {
             background: #1e293b;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projects .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .projects .project h3 {
             font-size: 1.5rem;
             color: #4f46e5;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
+        /* Services Section */
         .services ul {
             list-style-type: none;
             padding: 0;
@@ -91,7 +144,7 @@
 
         .services ul li {
             font-size: 1rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
@@ -102,23 +155,33 @@
             margin-right: 10px;
         }
 
+        /* Contact Section */
         .contact form {
             display: flex;
             flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .contact input,
         .contact textarea {
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 12px;
+            margin-bottom: 20px;
             border: none;
             border-radius: 5px;
             outline: none;
             font-size: 1rem;
+            background: #1e293b;
+            color: #fff;
+        }
+
+        .contact input::placeholder,
+        .contact textarea::placeholder {
+            color: #94a3b8;
         }
 
         .contact button {
-            padding: 10px;
+            padding: 12px;
             background: #4f46e5;
             color: #fff;
             border: none;
@@ -132,17 +195,56 @@
             background: #2563eb;
         }
 
+        /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background: #0f172a;
             font-size: 0.9rem;
             color: #94a3b8;
         }
 
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #4f46e5;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4f46e5;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: none;
+        }
+
+        #back-to-top:hover {
+            background: #2563eb;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 15px;
             }
 
             .projects .project {
@@ -156,25 +258,43 @@
     </style>
 </head>
 <body>
+    <!-- Sticky Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
     <header>
         <h1>Welcome to Andile Zikhali's Portfolio</h1>
         <p>Innovative Solutions for Web, App, and Custom Software Development</p>
     </header>
 
-    <section class="about">
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div>
+            <img src="hero-image.jpg" alt="Andilezikhali"
+        </div>
         <h2>About Me</h2>
         <p>Hi, I’m Andile Zikhali, a passionate full-stack developer with expertise in Laravel, React, MongoDB, .NET, and much more. I’ve worked with prestigious organizations such as SEDA, Empire Partner Foundation, and Ushaka Gaming Studio to deliver innovative solutions.</p>
         <p>From crafting robust web applications to designing intuitive user interfaces, I aim to bridge technology with creativity to solve real-world problems.</p>
     </section>
 
-    <section class="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <h2>Projects</h2>
+        <img src="project1.jpg" alt="P1">
         <div class="project">
             <h3>MzansiVz</h3>
             <p>A Netflix-style streaming app with an intuitive design and personalized recommendations.</p>
         </div>
         <div class="project">
-            <h3>LELO Games</h3>
+            <h3>Aggregator Games</h3>
+            
             <p>A game aggregator app allowing users to log in, save progress, and enjoy popular games like FIFA and Mortal Kombat.</p>
         </div>
         <div class="project">
@@ -183,7 +303,8 @@
         </div>
     </section>
 
-    <section class="services">
+    <!-- Services Section -->
+    <section id="services" class="services">
         <h2>Services</h2>
         <ul>
             <li>Frontend Development: React, Angular</li>
@@ -196,19 +317,46 @@
         </ul>
     </section>
 
-    <section class="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <form action="zikhalia851@gmail.com" method="post" enctype="text/plain">
+        <form action="mailto:zikhalia851@gmail.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
-            <a href="mailto:zikhalia851@gmail.com?subject=Website Inquiry&body=Hello Andile, I am contacting you from your portfolio website.">Contact Me</a>
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>Made with ❤️ by Andile Zikhali | &copy; 2025 All Rights Reserved</p>
+        <p>Made with ❤️ by <a href="mailto:zikhalia851@gmail.com">Andile Zikhali</a> | &copy; 2025 All Rights Reserved</p>
+        <p>Follow me: 
+            <a href="https://andilezikhali-debug.github.io/AndileZikhali-a-Portfolio" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/andile-zikhali-a46379222?trk=contact-info" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/andile" target="_blank"><i class="fab fa-twitter"></i></a>
+        </p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.onscroll = () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.addEventListener("click", () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
 </body>
 </html>
