@@ -1,14 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-  <title>Andile Zikhali's Portfolio</title>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Andile Zikhali</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-  <body>
-    <h1>About Andile Zikhali</h1>
-    <p>Andile Zikhali, a passionate full-stack developer with expertise in Laravel, React, MongoDB, .NET, and much more. I’ve worked with prestigious organizations such as SEDA, Empire Partner Foundation, and Ushaka Gaming Studio to deliver innovative solutions.
+    <header>
+        <h1>Andile Zikhali</h1>
+        <p>Innovator | Full-Stack Developer | Game & AI Enthusiast | Entrepreneur</p>
+    </header>
 
-From crafting robust web applications to designing intuitive user interfaces, I aim to bridge technology with creativity to solve real-world problems.</p>
-  </body>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#work">What I Do</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I am <strong>Andile Zikhali</strong>, a passionate full-stack developer, game creator, and AI enthusiast. I specialize in creating interactive platforms, 
+            gaming solutions, and AI-driven applications that entertain, educate, and empower users.
+        </p>
+        <p>
+            With experience working with <strong>SEDA, Empire Partner Foundation, GameOn Africa, and Ushaka Gaming Studio</strong>, I am committed to delivering 
+            unique and impactful digital solutions.
+        </p>
+    </section>
+
+    <section id="work" class="section">
+        <h2>What I Do</h2>
+        <div class="work-item">
+            <h3>Game Development & Aggregation</h3>
+            <p>I created <strong>LELO Games</strong>, a game aggregator app for popular titles like FIFA, GTA, and Mortal Kombat. I'm also developing a school simulation game and a code-learning game.</p>
+        </div>
+        <div class="work-item">
+            <h3>AI & Cultural Preservation</h3>
+            <p>Currently working on an <strong>AI-powered language learning platform</strong> to teach South African languages and preserve cultural heritage.</p>
+        </div>
+        <div class="work-item">
+            <h3>Web Development & Business Solutions</h3>
+            <p>I develop platforms such as an <strong>accountant-business marketplace</strong>, <strong>MzansiVz</strong> (a Netflix-style streaming service), and my interactive portfolio site.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="responseMessage"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Andile Zikhali | All Rights Reserved</p>
+    </footer>
+
+</body>
 </html>
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1e1e2e;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #1e1e2e;
+}
+
+.work-item {
+    background: #f8f8f8;
+    padding: 15px;
+    margin-top: 10px;
+    border-left: 5px solid #1e1e2e;
+    border-radius: 5px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactForm button {
+    background-color: #1e1e2e;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contactForm button:hover {
+    background-color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e2e;
+    color: white;
+    margin-top: 20px;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("nav ul li a");
+    
+    links.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        });
+    });
+
+    // Contact Form Submission (Mock)
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("responseMessage").textContent = "Thank you for reaching out! I'll get back to you soon.";
+        document.getElementById("contactForm").reset();
+    });
+});
