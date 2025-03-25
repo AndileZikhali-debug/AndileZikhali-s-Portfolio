@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Andile Zikhali's futuristic portfolio showcasing cutting-edge web development and app design.">
+    <meta name="description" content="Andile Zikhali's professional portfolio showcasing web development, app design, and innovative solutions.">
     <meta name="author" content="Andile Zikhali">
-    <meta name="keywords" content="Andile Zikhali, Web Development, App Design, Full-Stack, Laravel, React, MongoDB, Node.js, Futuristic Design">
-    <title>Andile Zikhali | Futuristic Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="keywords" content="Andile Zikhali, Web Development, App Design, Full-Stack, Laravel, React, MongoDB, Node.js, Professional Portfolio">
+    <title>Andile Zikhali | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -18,22 +18,21 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(180deg, #0d0d2b 0%, #1e1e5f 100%);
-            color: #e0e0ff;
-            overflow-x: hidden;
+            background: #f4f7fc;
+            color: #1e293b;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
-        /* Futuristic Navigation */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 40, 0.8);
-            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.95);
             padding: 20px;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -44,13 +43,11 @@
         }
 
         nav ul li a {
-            font-family: 'Orbitron', sans-serif;
-            color: #00d4ff;
+            color: #1e293b;
             text-decoration: none;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.4s ease;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
             position: relative;
         }
 
@@ -59,7 +56,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background: #ff007a;
+            background: #3b82f6;
             bottom: -5px;
             left: 0;
             transition: width 0.3s ease;
@@ -70,159 +67,186 @@
         }
 
         nav ul li a:hover {
-            color: #ff007a;
-            transform: translateY(-3px);
+            color: #3b82f6;
         }
 
-        /* Header with 3D Effect */
+        /* Header */
         header {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: radial-gradient(circle at center, #1e1e5f, #0d0d2b);
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            color: #fff;
+            text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: url('https://www.transparenttextures.com/patterns/stardust.png');
-            animation: rotate 20s linear infinite;
-            opacity: 0.1;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
 
         header h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 4rem;
-            color: #00d4ff;
-            text-shadow: 0 0 20px #00d4ff, 0 0 40px #ff007a;
-            animation: neonGlow 2s infinite alternate;
+            font-size: 3.5rem;
+            font-weight: 700;
+            animation: fadeIn 1.5s ease;
         }
 
         header p {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            color: #e0e0ff;
-            animation: fadeInUp 2s ease;
+            font-size: 1.3rem;
+            margin-top: 15px;
+            animation: fadeIn 2s ease;
         }
 
-        @keyframes neonGlow {
-            0% { text-shadow: 0 0 10px #00d4ff, 0 0 20px #ff007a; }
-            100% { text-shadow: 0 0 20px #00d4ff, 0 0 40px #ff007a; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* Sections */
         section {
-            padding: 100px 20px;
+            padding: 80px 20px;
             max-width: 1400px;
             margin: 0 auto;
-            position: relative;
         }
 
         h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            color: #ff007a;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1e293b;
             text-align: center;
-            margin-bottom: 50px;
-            text-shadow: 0 0 15px #ff007a;
+            margin-bottom: 40px;
         }
 
-        /* About Section */
+        /* About with Holographic Card */
         .about {
-            background: rgba(20, 20, 60, 0.6);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .holo-card {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
             border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .about img {
-            max-width: 100%;
-            border-radius: 15px;
-            transition: transform 0.5s ease;
+        .holo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: 1;
         }
 
-        .about img:hover {
-            transform: scale(1.05) rotate(2deg);
+        .holo-card::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+            top: -50%;
+            left: -50%;
+            z-index: 2;
+            transition: all 0.5s ease;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
         }
 
         .about p {
             font-size: 1.1rem;
-            line-height: 1.9;
-            margin: 20px 0;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
-        /* Projects Section */
+        /* Projects with Media Gallery */
         .projects .project {
-            background: rgba(30, 30, 80, 0.8);
+            background: #fff;
             padding: 30px;
             margin: 20px 0;
             border-radius: 15px;
-            transition: all 0.4s ease;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
         .projects .project:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 0 40px rgba(255, 0, 122, 0.5);
+            transform: translateY(-10px);
         }
 
         .projects .project h3 {
-            font-family: 'Orbitron', sans-serif;
-            color: #00d4ff;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+            color: #3b82f6;
+            margin-bottom: 15px;
         }
 
-        /* Services Section */
+        .media-gallery {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .media-gallery img, .media-gallery video {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Services with Expandable Descriptions */
         .services ul {
             list-style: none;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        .services ul li {
-            background: rgba(40, 40, 100, 0.7);
+        .service-item {
+            background: #fff;
             padding: 20px;
             border-radius: 10px;
-            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .services ul li:hover {
-            background: rgba(0, 212, 255, 0.2);
+        .service-item:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .services ul li::before {
-            content: "⚡";
-            margin-right: 10px;
-            color: #ff007a;
+        .service-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
         }
 
-        /* Contact Section */
+        .service-desc {
+            max-height: 0;
+            overflow: hidden;
+            font-size: 1rem;
+            color: #64748b;
+            transition: max-height 0.5s ease;
+        }
+
+        .service-item.active .service-desc {
+            max-height: 200px;
+        }
+
+        /* Contact */
         .contact form {
             max-width: 700px;
             margin: 0 auto;
             padding: 30px;
-            background: rgba(20, 20, 60, 0.7);
+            background: #fff;
             border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .contact input,
@@ -230,78 +254,72 @@
             width: 100%;
             padding: 15px;
             margin-bottom: 20px;
-            border: 2px solid #00d4ff;
-            border-radius: 10px;
-            background: rgba(10, 10, 40, 0.8);
-            color: #e0e0ff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: border-color 0.3s ease;
         }
 
         .contact input:focus,
         .contact textarea:focus {
-            border-color: #ff007a;
-            box-shadow: 0 0 15px rgba(255, 0, 122, 0.5);
+            border-color: #3b82f6;
             outline: none;
         }
 
         .contact button {
             padding: 15px;
-            background: linear-gradient(45deg, #00d4ff, #ff007a);
+            background: #3b82f6;
             border: none;
-            border-radius: 10px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
+            border-radius: 8px;
             color: #fff;
+            font-size: 1.1rem;
             cursor: pointer;
-            transition: all 0.4s ease;
+            transition: background 0.3s ease;
         }
 
         .contact button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.7);
+            background: #1e3a8a;
         }
 
         /* Footer */
         footer {
             padding: 40px;
-            background: #0d0d2b;
+            background: #1e293b;
+            color: #e0e0ff;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         footer a {
-            color: #00d4ff;
+            color: #3b82f6;
             margin: 0 10px;
             font-size: 1.5rem;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
         }
 
         footer a:hover {
-            color: #ff007a;
-            transform: scale(1.2);
+            color: #60a5fa;
         }
 
         /* Back to Top */
         #back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(45deg, #00d4ff, #ff007a);
+            bottom: 20px;
+            right: 20px;
+            background: #3b82f6;
             border: none;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
             color: #fff;
+            font-size: 1.2rem;
             cursor: pointer;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             display: none;
         }
 
         #back-to-top:hover {
-            transform: rotate(360deg) scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.7);
+            background: #1e3a8a;
+            transform: scale(1.1);
         }
 
         /* Responsive */
@@ -324,42 +342,79 @@
 
     <header>
         <h1>Andile Zikhali</h1>
-        <p>Futuristic Web & App Solutions</p>
+        <p>Full-Stack Developer | Innovative Solutions</p>
     </header>
 
     <section id="about" class="about">
-        <center><img src="hero-image.jpg" alt="Andile Zikhali" style="max-width: 500px;"></center>
-        <h2>About Me</h2>
-        <p>I’m Andile Zikhali, a visionary full-stack developer harnessing Laravel, React, MongoDB, and .NET to craft next-gen solutions. Collaborating with SEDA, Empire Partner Foundation, and Ushaka Gaming Studio, I push the boundaries of technology.</p>
-        <p>My mission: fuse creativity with cutting-edge tech to solve tomorrow’s challenges today.</p>
+        <div class="holo-card">
+            <img src="hero-image.jpg" alt="Andile Zikhali">
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I’m Andile Zikhali, a dedicated full-stack developer with expertise in Laravel, React, MongoDB, and .NET. I’ve collaborated with esteemed organizations like SEDA, Empire Partner Foundation, and Ushaka Gaming Studio to deliver high-impact solutions.</p>
+            <p>My passion lies in creating seamless, efficient, and visually stunning digital experiences that solve real-world problems.</p>
+        </div>
     </section>
 
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project">
             <h3>MzansiVz</h3>
-            <p>A sleek, Netflix-inspired streaming platform with AI-driven recommendations.</p>
+            <p>A Netflix-inspired streaming platform with AI-driven recommendations.</p>
+            <div class="media-gallery">
+                <img src="mzansivz-screenshot.jpg" alt="MzansiVz Screenshot">
+                <video controls src="mzansivz-demo.mp4" alt="MzansiVz Demo"></video>
+            </div>
         </div>
         <div class="project">
             <h3>Aggregator Games</h3>
-            <p>A futuristic gaming hub with seamless login, progress tracking, and top-tier titles.</p>
+            <p>A gaming hub with login, progress tracking, and top-tier titles.</p>
+            <div class="media-gallery">
+                <img src="aggregator-screenshot.jpg" alt="Aggregator Games Screenshot">
+                <video controls src="aggregator-demo.mp4" alt="Aggregator Games Demo"></video>
+            </div>
         </div>
         <div class="project">
             <h3>Custom Management Systems</h3>
-            <p>Tailored, high-tech solutions to supercharge business efficiency.</p>
+            <p>Tailored solutions to enhance business efficiency.</p>
+            <div class="media-gallery">
+                <img src="management-screenshot.jpg" alt="Management System Screenshot">
+                <video controls src="management-demo.mp4" alt="Management System Demo"></video>
+            </div>
         </div>
     </section>
 
     <section id="services" class="services">
         <h2>Services</h2>
         <ul>
-            <li>Frontend: React, Angular</li>
-            <li>Backend: Laravel, Node.js, .NET</li>
-            <li>Databases: MongoDB, MySQL</li>
-            <li>Custom Platforms</li>
-            <li>Mobile Apps</li>
-            <li>API Integration</li>
-            <li>Tech Consulting</li>
+            <li class="service-item">
+                <div class="service-title">Frontend: React, Angular</div>
+                <div class="service-desc">Building responsive, dynamic, and user-friendly interfaces with modern frameworks like React and Angular.</div>
+            </li>
+            <li class="service-item">
+                <div class="service-title">Backend: Laravel, Node.js, .NET</div>
+                <div class="service-desc">Developing robust, scalable server-side applications with secure APIs and efficient logic.</div>
+            </li>
+            <li class="service-item">
+                <div class="service-title">Databases: MongoDB, MySQL</div>
+                <div class="service-desc">Designing and optimizing databases for performance, scalability, and data integrity.</div>
+            </li>
+            <li class="service-item">
+                <div class="service-title">Custom Platforms</div>
+                <div class="service-desc">Creating bespoke web solutions tailored to unique business needs.</div>
+            </li>
+            <li class="service-item">
+                <div class="service-title">Mobile Apps</div>
+                <div class="service-desc">Crafting cross-platform mobile applications with seamless functionality.</div>
+            </li>
+            <li class="service-item">
+                <div class="service-title">API Integration</div>
+                <div class="service-desc">Connecting systems with custom or third-party APIs for enhanced functionality.</div>
+            </li>
+            <li class="service-item">
+                <div class="service-title">Tech Consulting</div>
+                <div class="service-desc">Providing expert guidance on tech strategy, architecture, and implementation.</div>
+            </li>
         </ul>
     </section>
 
@@ -369,7 +424,7 @@
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Transmit</button>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
@@ -382,9 +437,10 @@
         </p>
     </footer>
 
-    <button id="back-to-top" title="Back to Top"><i class="fas fa-rocket"></i></button>
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 
     <script>
+        // Back to Top
         const backToTopButton = document.getElementById("back-to-top");
         window.onscroll = () => {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -393,9 +449,33 @@
                 backToTopButton.style.display = "none";
             }
         };
-
         backToTopButton.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Expandable Services
+        const serviceItems = document.querySelectorAll('.service-item');
+        serviceItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Holographic Card Interaction
+        const holoCard = document.querySelector('.holo-card');
+        holoCard.addEventListener('mousemove', (e) => {
+            const rect = holoCard.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const rotateX = (y / rect.height - 0.5) * 20;
+            const rotateY = (x / rect.width - 0.5) * -20;
+            holoCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            holoCard.querySelector('::before').style.top = `${y - rect.height / 2}px`;
+            holoCard.querySelector('::before').style.left = `${x - rect.width / 2}px`;
+        });
+
+        holoCard.addEventListener('mouseleave', () => {
+            holoCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
         });
     </script>
 </body>
