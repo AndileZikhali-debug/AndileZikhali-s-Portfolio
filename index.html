@@ -83,6 +83,20 @@
             position: relative;
         }
 
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        header h1, header p {
+            position: relative;
+            z-index: 1;
+        }
+
         header h1 {
             font-size: 3.5rem;
             font-weight: 700;
@@ -341,6 +355,7 @@
     </nav>
 
     <header>
+        <div id="particles-js"></div>
         <h1>Andile Zikhali</h1>
         <p>Full-Stack Developer | Innovative Solutions</p>
     </header>
@@ -439,6 +454,71 @@
 
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 50,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: '#60a5fa'
+                    },
+                    shape: {
+                        type: 'circle'
+                    },
+                    opacity: {
+                        value: 0.3,
+                        random: true
+                    },
+                    size: {
+                        value: 3,
+                        random: true
+                    },
+                    line_linked: {
+                        enable: false
+                    },
+                    move: {
+                        enable: true,
+                        speed: 0.5,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'out'
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: 'repulse'
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: 'push'
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        repulse: {
+                            distance: 100,
+                            duration: 0.4
+                        },
+                        push: {
+                            particles_nb: 4
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
     <script>
         // Back to Top
         const backToTopButton = document.getElementById("back-to-top");
