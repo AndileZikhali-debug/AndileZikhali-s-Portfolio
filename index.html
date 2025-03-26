@@ -18,10 +18,20 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f4f7fc;
-            color: #1e293b;
+            background: linear-gradient(135deg, #0a0a2a, #000000); /* Dark space gradient */
+            color: #e0e0ff; /* Light text for contrast */
             scroll-behavior: smooth;
             overflow-x: hidden;
+        }
+
+        /* Particle Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Behind all content */
         }
 
         /* Navigation */
@@ -29,7 +39,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark nav */
             padding: 20px;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -43,7 +53,7 @@
         }
 
         nav ul li a {
-            color: #1e293b;
+            color: #e0e0ff;
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 600;
@@ -56,7 +66,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background: #3b82f6;
+            background: #60a5fa; /* Accent color */
             bottom: -5px;
             left: 0;
             transition: width 0.3s ease;
@@ -67,7 +77,7 @@
         }
 
         nav ul li a:hover {
-            color: #3b82f6;
+            color: #60a5fa;
         }
 
         /* Header */
@@ -77,24 +87,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            background: linear-gradient(135deg, #0a0a2a, #000000);
             color: #fff;
             text-align: center;
             position: relative;
-        }
-
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-
-        header h1, header p {
-            position: relative;
-            z-index: 1;
         }
 
         header h1 {
@@ -119,12 +115,15 @@
             padding: 80px 20px;
             max-width: 1400px;
             margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark */
+            border-radius: 15px;
+            margin-bottom: 40px;
         }
 
         h2 {
             font-size: 2.5rem;
             font-weight: 600;
-            color: #1e293b;
+            color: #60a5fa; /* Space accent color */
             text-align: center;
             margin-bottom: 40px;
         }
@@ -141,7 +140,7 @@
         .holo-card {
             width: 300px;
             height: 400px;
-            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            background: linear-gradient(135deg, #1e3a8a, #000000); /* Darker space gradient */
             border-radius: 20px;
             position: relative;
             overflow: hidden;
@@ -179,11 +178,12 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 20px;
+            color: #e0e0ff;
         }
 
         /* Projects with Media Gallery */
         .projects .project {
-            background: #fff;
+            background: rgba(0, 0, 0, 0.8);
             padding: 30px;
             margin: 20px 0;
             border-radius: 15px;
@@ -197,8 +197,12 @@
 
         .projects .project h3 {
             font-size: 1.6rem;
-            color: #3b82f6;
+            color: #60a5fa;
             margin-bottom: 15px;
+        }
+
+        .projects .project p {
+            color: #e0e0ff;
         }
 
         .media-gallery {
@@ -222,7 +226,7 @@
         }
 
         .service-item {
-            background: #fff;
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -238,14 +242,14 @@
         .service-title {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #1e293b;
+            color: #60a5fa;
         }
 
         .service-desc {
             max-height: 0;
             overflow: hidden;
             font-size: 1rem;
-            color: #64748b;
+            color: #e0e0ff;
             transition: max-height 0.5s ease;
         }
 
@@ -258,7 +262,7 @@
             max-width: 700px;
             margin: 0 auto;
             padding: 30px;
-            background: #fff;
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -272,17 +276,18 @@
             border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
+            background: #1e293b; /* Dark input fields */
+            color: #e0e0ff;
         }
 
-        .contact input:focus,
-        .contact textarea:focus {
-            border-color: #3b82f6;
-            outline: none;
+        .contact input::placeholder,
+        .contact textarea::placeholder {
+            color: #64748b;
         }
 
         .contact button {
             padding: 15px;
-            background: #3b82f6;
+            background: #60a5fa;
             border: none;
             border-radius: 8px;
             color: #fff;
@@ -292,26 +297,26 @@
         }
 
         .contact button:hover {
-            background: #1e3a8a;
+            background: #3b82f6;
         }
 
         /* Footer */
         footer {
             padding: 40px;
-            background: #1e293b;
+            background: #000000; /* Solid black footer */
             color: #e0e0ff;
             text-align: center;
         }
 
         footer a {
-            color: #3b82f6;
+            color: #60a5fa;
             margin: 0 10px;
             font-size: 1.5rem;
             transition: color 0.3s ease;
         }
 
         footer a:hover {
-            color: #60a5fa;
+            color: #3b82f6;
         }
 
         /* Back to Top */
@@ -319,7 +324,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #3b82f6;
+            background: #60a5fa;
             border: none;
             border-radius: 50%;
             width: 50px;
@@ -332,7 +337,7 @@
         }
 
         #back-to-top:hover {
-            background: #1e3a8a;
+            background: #3b82f6;
             transform: scale(1.1);
         }
 
@@ -356,7 +361,6 @@
     </nav>
 
     <header>
-        
         <h1>Andile Zikhali</h1>
         <p>Full-Stack Developer | Innovative Solutions</p>
     </header>
@@ -460,67 +464,22 @@
         document.addEventListener('DOMContentLoaded', function() {
             particlesJS('particles-js', {
                 particles: {
-                    number: {
-                        value: 50,
-                        density: {
-                            enable: true,
-                            value_area: 800
-                        }
-                    },
-                    color: {
-                        value: '#60a5fa'
-                    },
-                    shape: {
-                        type: 'circle'
-                    },
-                    opacity: {
-                        value: 0.3,
-                        random: true
-                    },
-                    size: {
-                        value: 3,
-                        random: true
-                    },
-                    line_linked: {
-                        enable: false
-                    },
-                    move: {
-                        enable: true,
-                        speed: 0.5,
-                        direction: 'none',
-                        random: false,
-                        straight: false,
-                        out_mode: 'out'
-                    }
+                    number: { value: 150, density: { enable: true, value_area: 800 } },
+                    color: { value: '#ffffff' }, /* White stars */
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+                    size: { value: 2, random: true, anim: { enable: true, speed: 1, size_min: 0.1, sync: false } },
+                    line_linked: { enable: false },
+                    move: { enable: true, speed: 0.1, direction: 'none', random: false, straight: false, out_mode: 'out' }
                 },
                 interactivity: {
                     detect_on: 'canvas',
-                    events: {
-                        onhover: {
-                            enable: true,
-                            mode: 'repulse'
-                        },
-                        onclick: {
-                            enable: true,
-                            mode: 'push'
-                        },
-                        resize: true
-                    },
-                    modes: {
-                        repulse: {
-                            distance: 100,
-                            duration: 0.4
-                        },
-                        push: {
-                            particles_nb: 4
-                        }
-                    }
+                    events: { onhover: { enable: false }, onclick: { enable: false }, resize: true }
                 },
                 retina_detect: true
             });
         });
-    </script>
-    <script>
+
         // Back to Top
         const backToTopButton = document.getElementById("back-to-top");
         window.onscroll = () => {
