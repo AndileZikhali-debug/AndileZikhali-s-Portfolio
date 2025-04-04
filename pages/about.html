@@ -11,72 +11,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1>Andile Zikhali</h1>
-       
-        <p>Innovator | Full-Stack Developer | Game & AI Enthusiast | Entrepreneur</p>
-    </header>
-    <a href="../index.html">Home</a>
-
-
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">Andile Zikhali</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#work">What I Do</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="about" class="section">
-        <div>
-            <center><img src="Andyz.jpg" alt="Andilezikhali" style="width: 500px; heihgt: 300px;"></center>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="Andyz.jpg" alt="Andile Zikhali" class="profile-img">
+            <h1>About Me</h1>
+            <p class="tagline">Innovator | Full-Stack Developer | Game & AI Enthusiast | Entrepreneur</p>
         </div>
-        <h2>About Me</h2>
-        <h3>Innovator | Full-Stack Developer | Game & AI Enthusiast | Entrepreneur</h3>
-
-<p>I am Andile Zikhali, a passionate full-stack developer, game creator, and AI enthusiast dedicated to building unique digital experiences. My expertise lies in developing interactive platforms, gaming solutions, and AI-driven applications that not only entertain but also educate and empower users. With a track record of working with organizations such as SEDA, Empire Partner Foundation, GameOn Africa, and Ushaka Gaming Studio, I strive to create solutions that leave a lasting impact.</p>
-
-<p>My journey into technology and innovation is driven by a deep love for coding, problem-solving, and creativity. I am currently enhancing my skills in Fullstack development through Fullstack Open, ensuring I stay at the forefront of modern web and software development. I believe in pushing boundaries, exploring new technologies, and bringing ideas to life through engaging applications, whether in web development, gaming, or AI-driven solutions.</p>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="content">
+            <h2>My Journey</h2>
+            <p>I’m Andile Zikhali, a passionate full-stack developer, game creator, and AI enthusiast dedicated to building unique digital experiences. My expertise lies in developing interactive platforms, gaming solutions, and AI-driven applications that entertain, educate, and empower users. With experience at SEDA, Empire Partner Foundation, GameOn Africa, and Ushaka Gaming Studio, I strive to create impactful solutions.</p>
+            <p>My love for coding, problem-solving, and creativity drives me. I’m currently sharpening my skills through Fullstack Open, staying ahead in modern web and software development. I thrive on pushing boundaries and bringing ideas to life.</p>
+        </div>
+    </section>
+
+    <!-- Work Section -->
     <section id="work" class="section">
         <h2>What I Do</h2>
-        <div class="work-item">
-            <h3>Game Development & Aggregation</h3>
-            <p> I am the creator of LELO Games, a game aggregator app that brings together popular titles like FIFA 2023, Need for Speed, GTA, Mortal Kombat, Fortnite, and God of War. My focus is on providing gamers with a seamless experience, allowing them to log in, save progress, and enjoy their favorite games effortlessly.</p>
-
-<p>Additionally, I am working on:</p>
-
-<p>A school simulation game with realistic mechanics where players experience the real consequences of academic performance and behavior.</p>
-
-<p>A code-learning game that gamifies programming concepts to make learning interactive and enjoyable.  </p>
-        </div>
-        <div class="work-item">
-            <h3>AI & Cultural Preservation</h3>
-            <p>Currently working on an <strong>AI-powered language learning platform</strong> to teach South African languages and preserve cultural heritage.</p>
-        </div>
-        <div class="work-item">
-            <h3>Web Development & Business Solutions</h3>
-            <p>I build full-stack web applications that solve real-world business problems. My work includes:</p>
-
-<p>A platform connecting certified accountants with small and medium businesses—a secure and trustworthy marketplace where businesses find expert accountants while we act as mediators, ensuring a smooth transaction process.</p>
-
-<p>MzansiVz, a Netflix-style streaming platform tailored for local and international content.</p>
-
-<p>Transforming my portfolio website into a fully functional platform with affiliate programs, advertisements, and interactive features to enhance user engagement.</p>
-
-
-<br>I primarily work with Laravel (backend), React (frontend), and Firebase (authentication & security) to create scalable, high-performance applications.
+        <div class="work-grid">
+            <div class="work-item">
+                <h3>Game Development & Aggregation</h3>
+                <p>I created <strong>LELO Games</strong>, a game aggregator app featuring titles like FIFA 2023, Need for Speed, and Fortnite, with seamless login and progress-saving features.</p>
+                <p>Other projects include:</p>
+                <ul>
+                    <li>A school simulation game with realistic mechanics.</li>
+                    <li>A code-learning game to make programming fun.</li>
+                </ul>
+            </div>
+            <div class="work-item">
+                <h3>AI & Cultural Preservation</h3>
+                <p>I’m building an <strong>AI-powered language learning platform</strong> to teach South African languages and preserve cultural heritage.</p>
+            </div>
+            <div class="work-item">
+                <h3>Web Development & Business Solutions</h3>
+                <p>I craft full-stack web apps, including:</p>
+                <ul>
+                    <li>A platform connecting accountants with businesses.</li>
+                    <li><strong>MzansiVz</strong>, a Netflix-style streaming service.</li>
+                    <li>An interactive portfolio with affiliate programs.</li>
+                </ul>
+                <p>Tech stack: Laravel, React, Firebase.</p>
+            </div>
         </div>
     </section>
-    <section> 
-        
-    </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>Contact Me</h2>
-        <form id="contactForm">
+        <form id="contactForm" class="contact-form">
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" placeholder="Your Message" required></textarea>
@@ -85,9 +84,12 @@
         <p id="responseMessage"></p>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <p>© 2025 Andile Zikhali | All Rights Reserved</p>
+        <div class="social-links">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a>
+        </div>
     </footer>
-
 </body>
 </html>
